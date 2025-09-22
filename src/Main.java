@@ -5,8 +5,8 @@ public class Main {
         System.out.println("-----------------------------------------|");
 
         System.out.print("Enter your bill here ($): ");
-        double totalBill = scan.nextDouble();
-        totalBill = Math.round(totalBill * 100.00) / 100.00;
+        double initialBill = scan.nextDouble();
+        initialBill = Math.round(initialBill * 100.00) / 100.00;
         System.out.println("-----------------------------------------|");
 
         System.out.print("Enter your tip percentage here (%): ");
@@ -17,6 +17,9 @@ public class Main {
         int numPeople = scan.nextInt();
         System.out.println("-----------------------------------------|");
 
+        double totalBill = initialBill+(initialBill*0.01*tipPercent);
+        totalBill = Math.round(totalBill * 100.00) / 100.00;
 
+        System.out.println(totalBill);
     }
 }

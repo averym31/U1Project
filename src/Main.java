@@ -34,5 +34,7 @@ public class Main {
         System.out.printf("%.2f%n", tipPerson);
         System.out.print("Total bill per person: $");
         System.out.printf("%.2f%n", billPerson);
+
+        //github link: https://github.com/averym31/U1Project
     }
 }

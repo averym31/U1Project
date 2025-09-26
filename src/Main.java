@@ -2,33 +2,30 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-// tells user to input their bill as a double with 2 floating point decimals
-        System.out.print("Enter your bill here ($): ");
+        System.out.print("Enter your bill here ($): "); // tells user to input their bill as a double with 2 floating point decimals
         double initialBill = scan.nextDouble();
-        initialBill = Math.round(initialBill * 100.00) / 100.00;
-// tells user to input their tip percentage as an integer
+        initialBill = Math.round(initialBill * 100.00) / 100.00; // tells user to input their bill as a double with 2 floating point decimals
         System.out.print("Enter your tip percentage here (%): ");
         int tipPercent = scan.nextInt();
-// tells user to input the number of people paying as an integer
-        System.out.print("Enter the number of people here: ");
+        System.out.print("Enter the number of people here: "); // tells user to input their bill as a double with 2 floating point decimals
         int numPeople = scan.nextInt();
-// totalTip is determined by the percentage multiplied by the cost of the bill
-        double totalTip = initialBill*0.01*tipPercent;
-        totalTip = Math.round(totalTip * 100.00) / 100.00;
-        //totalBill is determined by the cost of the bill plus the total cost of the tips
-        double totalBill = initialBill+totalTip;
-        totalBill = Math.round(totalBill * 100.00) / 100.00;
-        // tipPerson is determined by the amount of money in tips each person pays
-        double tipPerson = totalTip/numPeople;
-        tipPerson = Math.round(tipPerson * 100.00) / 100.00;
-        // billPerson is determined by the total amount of money each person pays, including tips
-        double billPerson = totalBill/numPeople;
-        billPerson = Math.round(billPerson * 100.00) / 100.00;
 
-        //this println statement is just for design purposes
+        double totalTip = initialBill*0.01*tipPercent; // totalTip is determined by the percentage multiplied by the cost of the bill
+        totalTip = Math.round(totalTip * 100.00) / 100.00; // rounds the value
+
+        double totalBill = initialBill+totalTip; //totalBill is determined by the cost of the bill plus the total cost of the tips
+        totalBill = Math.round(totalBill * 100.00) / 100.00; // rounds the value
+
+        double tipPerson = totalTip/numPeople; // tipPerson is determined by the amount of money in tips each person pays
+        tipPerson = Math.round(tipPerson * 100.00) / 100.00; // rounds the value
+
+        double billPerson = totalBill/numPeople; // billPerson is determined by the total amount of money each person pays, including tips
+        billPerson = Math.round(billPerson * 100.00) / 100.00; // rounds the value
+
+        //this println statement is to space out the inputs from the outputs
         System.out.println("----------------------------------------");
 
-        //these last lines just print out all the necessary info the code has calculated
+        /* these last lines print out all the necessary info the code has calculated */
         System.out.print("Total tip amount: $");
         System.out.printf("%.2f%n", totalTip);
         System.out.print("Total bill cost: $");
